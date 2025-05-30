@@ -1,0 +1,81 @@
+Multi-Functional Machine Learning GUI
+
+This project is a feature-rich machine learning application built with PyQt6. It offers classical ML algorithms, dimensionality reduction techniques, deep learning models (MLP, CNN, RNN), and optimizers (Adam, SGD, RMSprop) with full architecture configuration, training, and monitoring capabilities through an intuitive GUI.
+
+---
+
+Implemented Features
+
+Classical Machine Learning
+- Algorithms: Logistic Regression, Support Vector Machines, Decision Trees, Random Forests, K-Nearest Neighbors, K-Means Clustering
+- Configurable hyperparameters and live performance metrics display
+
+Dimensionality Reduction
+- Techniques: PCA, LDA, t-SNE, UMAP
+- Interactive 2D/3D scatter plots for visualizing reduced feature spaces
+
+Deep Learning Models
+- MLP (Multi-Layer Perceptron)
+  * Custom dense layers: add, remove, and reorder with user-defined neuron counts (e.g., 128 -> 64 -> 32)
+  * Activation functions: ReLU, Sigmoid, Tanh
+  * Training parameters: batch size, learning rate, optimizer selection, number of epochs
+
+- CNN (Convolutional Neural Network)
+  * Supported layers: Conv2D, MaxPooling2D, Dropout, Flatten
+  * Dynamic configuration: filter counts, kernel sizes, padding, activations
+  * Real-time architecture summary and reset option in GUI
+
+- RNN (Recurrent Neural Network)
+  * LSTM and GRU layers for sequence/time-series data
+  * Configurable units, return_sequences, and activation functions
+
+Optimizers
+- Supported optimizers: Adam, SGD, RMSprop
+- Configurable hyperparameters:
+  * Adam: learning rate, β₁, β₂, ε
+  * SGD: learning rate, momentum
+  * RMSprop: learning rate, decay rate (ρ), ε
+- Selection via GUI for each training session
+
+Training & Monitoring
+- Live logs: loss, accuracy, validation loss, validation accuracy, current learning rate
+- Post-training plots: loss vs. epochs, accuracy vs. epochs
+- Gradient histogram visualization at configurable intervals
+- Early stopping to prevent overfitting
+- Learning rate schedulers: Step Decay, Exponential Decay
+
+Model Persistence
+- Save models: .h5 (weights) and .json (architecture)
+- Load saved models for evaluation or continued training
+
+
+
+Key libraries:
+- Python 3.8+
+- PyQt6
+- TensorFlow 2.x or PyTorch
+- scikit-learn
+- matplotlib
+- numpy
+- pandas
+- h5py
+- umap-learn
+
+Usage
+1. Start the application:
+   python main.py
+2. Choose the module:
+   - Classical ML, Dimensionality Reduction, Deep Learning
+3. Configure model architecture and hyperparameters via GUI controls
+4. Load dataset (e.g., CSV files, MNIST, custom data)
+5. Launch training and monitor live logs and plots
+6. Evaluate on the test set and view performance metrics
+7. Save model and logs for later use
+
+Examples
+- Training an MLP on the Iris dataset
+- Visualizing PCA and t-SNE projections for high-dimensional data
+- Building and training a custom CNN on MNIST
+- Fine-tuning a loaded RNN on time-series data
+
+Student: Mustafa Muş (22067053)
